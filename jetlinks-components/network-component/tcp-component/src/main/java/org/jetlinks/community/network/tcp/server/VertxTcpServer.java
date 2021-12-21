@@ -67,11 +67,9 @@ public class VertxTcpServer implements TcpServer {
             shutdown();
         }
         this.tcpServers = servers;
-
         for (NetServer tcpServer : this.tcpServers) {
             tcpServer.connectHandler(this::acceptTcpConnection);
         }
-
     }
 
     /**
